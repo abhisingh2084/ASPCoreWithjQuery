@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Surname</label>
+                <input type="text" class="form-control" id="surname" placeholder="Enter Surname">
+            </div>
+            <br />
+            <button class="btn btn-info" onclick="Display()">Submit</button>
+            <h3 id="result"></h3>
+        </div>
+    </div>
+</div>
+ 
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    // $(document).ready(function () {
+    //     alert("Welcome To jQuery ")
+    // });
+
+    function Display()
+    {
+        var name = $("#name").val();
+        var surname = $("surname").val();
+
+        var data = name + " " + surname
+
+        $("#result").text(data);
+    }
+</script>
